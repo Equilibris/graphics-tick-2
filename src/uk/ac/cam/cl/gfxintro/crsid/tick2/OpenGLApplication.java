@@ -1,5 +1,6 @@
 package uk.ac.cam.cl.gfxintro.crsid.tick2;
 
+import org.joml.Matrix4f;
 import org.joml.Vector3f;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.*;
@@ -201,11 +202,11 @@ public class OpenGLApplication {
 			elapsedTime += deltaTime * 1000.0f; // Time elapsed since the beginning of this program in millisecs
 
 			skybox.render(camera, deltaTime, elapsedTime);
-			cubeRobot.render(camera, deltaTime, elapsedTime);
+			cubeRobot.render(camera, new Matrix4f(),deltaTime, elapsedTime);
 			
 		} else {
 			skybox.render(camera, 0f, elapsedTime);
-			cubeRobot.render(camera, 0f, elapsedTime);
+			cubeRobot.render(camera, new Matrix4f(), 0f, elapsedTime);
 		}
 		
 		currentTime = newTime;

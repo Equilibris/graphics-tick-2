@@ -34,7 +34,7 @@ void main()
 {
     const vec3 lpos = vec3(-1, 7, -1);
     const vec3 lcol = vec3(0.941, 0.968, 1);
-    const vec3 acol = vec3(0.16, 0.1, 0.1);
+    const vec3 acol = vec3(0.16, 0.1, 0.);
     const float lins = 80;
 
     const float diffcons = 0.4;
